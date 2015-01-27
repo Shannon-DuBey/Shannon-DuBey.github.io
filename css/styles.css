@@ -1,0 +1,431 @@
+
+/* colors 
+
+blue #59a3f5 
+hex blue #00CDFF
+
+*/
+
+/* CSS RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* remove dashed outlink on links & buttons */
+a:focus, a:active, 
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+select::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: 0;
+    outline : 0;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-size:16px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+:focus {
+	outline:none;
+	color:#59a3f5;
+	font-weight:bold;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Global Styles */
+/* fonts */
+h1, h2, h3, h4 {
+	font-weight:bold;
+}
+h1 {
+	font-size:2em;
+}
+h2 {
+	font-size:1.5em;
+}
+h3 {
+	font-size:1.25em;
+}
+.bold {
+	font-weight:bold;
+}
+.italic {
+	font-style:italic;
+}
+/* alignments */
+.floatLeft {
+	float:left;
+}
+.floatRight {
+	float:right;
+}
+.clear {
+	clear:both;
+}
+
+#pageWrap {
+	margin:0 auto;
+	background-color:#363f48;
+}
+
+
+
+
+/* ACTUAL CSS FOR PAGE UNDER HERE - MOBILE FIRST!!! */
+
+/* === Mobile devices - Portrait (320px wide) === */
+@media only screen and (min-width : 20em) {
+	p.title {
+		font-weight:bold;
+		font-size:2.5em;
+		color:#00cdff;
+		width:100%;
+		margin:2% auto;
+		text-align:center;
+	}
+
+	/* skills */
+	div.skills {
+		margin:2em auto;
+		text-align:center;
+		color:#dfdfdf;
+	}
+	div.skills ul {
+		display:inline-block;
+	}
+	div.skills ul.skillList1 li,
+	div.skills ul.skillList2 li {
+		background:url('../images/hexagon.png') no-repeat;
+		background-position:center;
+		background-size:100%;
+		height:8.7em;
+		width:7em;
+		display:inline-block;
+		margin:0 .5em;
+		line-height:1.9em;
+	}
+	div.skills ul.skillList1 li div,
+	div.skills ul.skillList2 li div {
+		width:7em;
+		height:5em;
+		font-size:1.45em;
+		font-weight:bold;
+		text-align:center;
+		display:table-cell;
+	}
+	div.skills ul.skillList1 li div p,
+	div.skills ul.skillList2 li div p{
+		padding-top:2.3em;
+	}
+	div.skills ul li div p.twoLine {
+		padding-top:1em;
+		font-size:.9em;
+	}
+	#lapTop, #lapBottom {
+		display:none;
+	}
+}
+
+/* === Mobile devices - Landscape (480px wide) === */
+@media only screen and (min-width : 30em) {
+
+}
+
+/* === Tablet devices - Portrait (768px wide) === */
+@media only screen and (min-width : 48em) {
+	p.title {
+		font-size:3.5em;
+		margin:2% 2% 2% 10%;
+		text-align:left;
+	}
+	
+/* Intro */
+	html[data-useragent*='MSIE 10.0'] #introCotainer {
+		display:none;
+	}
+
+	#introContainer {
+		height:100%;
+		width:100%;
+		background-color:#000;
+		position:absolute;
+		left:0;
+		overflow:hidden;
+		-webkit-animation: introContainer 1.5s forwards;
+	    -webkit-animation-delay: 6s;
+	    animation: introContainer 1.5s forwards;
+	    animation-delay: 6s;
+	}
+	@-webkit-keyframes introContainer {
+	    100% { left: -100%; }
+	}
+	@keyframes introContainer {
+	    100% { left: -100%; }
+	}
+	#pageWrap {
+		width:100%;
+	}
+	#pageWrap.hidden, #pageWrap.visible {
+		max-height:0;            
+        overflow:hidden;
+        -webkit-transition: max-height 1.5s ease-in-out;
+        -moz-transition: max-height 1.5s ease-in-out;
+        -o-transition: max-height 1.5s ease-in-out;
+        transition: max-height 1.5s ease-in-out;
+	}
+	#pageWrap.visible {
+		max-height:3000px;
+	}
+	
+	#introContainer div#introContent {
+		height:100%;
+		width:100%;
+		background-color:#000;
+		background:url('../images/table.jpg') no-repeat;
+		background-size:100%;
+		background-position:center;
+		position:absolute;
+		top:-100%;
+		-webkit-animation: introContent 0.5s forwards;
+	    -webkit-animation-delay: .25s;
+	    animation: introContent 0.5s forwards;
+	    animation-delay: .25s;
+	}
+	#introContent div.shadow {
+		position:absolute;
+		height:100%;
+		width:100%;
+		background-color:#000;
+		opacity:.4;
+	}
+	
+	@-webkit-keyframes introContent {
+	    100% { top: 0; }
+	}
+	@keyframes introContent {
+	    100% { top: 0; }
+	}
+	
+
+/* spinner */
+	#spinner {
+		position: absolute;
+		top: 45%;
+		left: 55%;
+		margin: -100px 0 0 -100px;
+		height: 100px;
+		width: 100px;
+		text-indent: 250px;
+		white-space: nowrap;
+		overflow: hidden;
+		background-image: url(../images/spinnerSm.png);
+		color:#fff;
+		-webkit-animation-name: spinnerRotate;
+		-webkit-animation-duration: 2s;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-timing-function: linear;
+		animation-name: spinnerRotate;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+	@-webkit-keyframes spinnerRotate {
+		from {
+			-webkit-transform: rotate(0deg);
+		}
+		to {
+			-webkit-transform: rotate(360deg);
+		}
+	}
+	@keyframes spinnerRotate {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+/* main layout */
+	#top {
+		background:url('../images/headerBg.jpg') no-repeat;
+		background-size:100%;
+		width:100%;
+		padding-bottom:33%;
+	}
+	#pageDivide {
+		margin: 2em 2%;
+	}
+	#footer {
+		background:url('../images/footerBg.jpg') no-repeat;
+		background-size:100%;
+		width:100%;
+		padding-bottom:9.4%;
+	}
+/* skills */
+	div.skills ul.skillList2{
+		margin-top:-2em;
+	}
+	div.skills {
+		width:70%;
+	}
+}
+/* lapTop */
+	#lapTop, #lapBottom {
+		display:block;
+	}
+	#lapTop {
+		background:url('../images/lapScreen.png') no-repeat;
+		background-size:100%;
+		padding-bottom:10%;
+		-webkit-transition: padding-bottom .5s ease-in-out;
+	    -moz-transition: padding-bottom .5s ease-in-out;
+	    -o-transition: padding-bottom .5s ease-in-out;
+	    transition: padding-bottom .5s ease-in-out;
+	}
+	#lapTop.open {
+		padding-bottom:47%;
+	}
+	#lapBottom {
+		background:url('../images/lapBase.png') no-repeat;
+		padding-bottom:4.2381%;
+		background-size:100%;
+	}
+
+/* === Tablet devices - Landscape (1024px wide) === */
+@media only screen and (min-width : 64em) {
+	/* skills */
+	div.skills {
+		width:65%;
+	}
+	div.skills ul.skillList1 li,
+	div.skills ul.skillList2 li {
+		height:10.7em;
+		width:9em;
+	}
+	div.skills ul.skillList1 li div p,
+	div.skills ul.skillList2 li div p{
+		padding-top:2.7em;
+	}
+	div.skills ul li div p.twoLine {
+		padding-top:1.7em;
+		font-size:.9em;
+	}
+
+	/* Intro */
+	#spinner {
+		position: absolute;
+		left: 55%;
+		top:70%;
+	}
+}
+
+/* === Netbook devices (1100px wide) === */
+@media only screen and (min-width : 68.75em) {
+	#pageDivide {
+		margin: 2em 15%;
+	}
+
+	div.skills ul.skillList1,
+	div.skills ul.skillList2 {
+		margin-top:0;
+	}
+	div.skills {
+		width:90%;
+	}
+}
+
+/* === Netbook devices (1224px wide) === */
+@media only screen and (min-width : 76.5em) {
+
+}
+
+/* === Desktop devices (1300px wide) === */
+
+@media only screen and (min-width : 81.25em) {
+
+}
+
+
+
+
+
+/* TEST CSS */
+
+
+/* nav menu */
+#nav {
+	width:60%;
+	margin:0 auto;
+}
+#nav ul.navLinks {
+	background-color:#ccc;
+	padding:.2em;
+	width:90%;
+	/* to eliminate the white space with inline */
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+#nav ul.navLinks a {
+	background-color:#000;
+	color:#fff;
+	font-size:1.5em;
+	font-weight:bold;
+	width:25%;
+	text-align:center;
+	padding:.5em;
+	text-decoration:none;
+}
+#nav ul.navLinks a:nth-child(even) {
+	border-left:5px solid red;
+	border-right:5px solid red;
+}
+#nav ul.navLinks a:last-child {
+	border-right:none;
+}
+

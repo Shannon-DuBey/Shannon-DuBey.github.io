@@ -1,0 +1,199 @@
+#resume {
+	background-color:#fff;
+	padding:.5em 0;
+}
+
+/* === Mobile devices - Portrait (320px wide) === */
+@media only screen and (min-width : 20em) {
+	section.resume {
+		margin:5em auto;
+		width:95%;
+	}
+	/* navigation links */
+	ul.nav {
+		margin: 1em 0 0 0;
+		padding-left:.5em;
+		padding-bottom:.2em;
+		border-bottom: 1px solid #666;
+	}
+	ul.nav li {
+		display:inline-block;
+		margin: 0 auto;
+		font-size:1.5em;
+		padding-bottom:.2em;
+	}
+	ul.nav li.active a {
+		color:#59A3F5;
+		font-weight:bold;
+	}
+	ul.nav li a {
+		text-decoration: none;
+		color:#666;
+		font-weight:bold;
+	}
+
+	/* gobal display settings */
+	div.tabContent {
+		border:1px solid #337AB7;
+		border-top:0px;
+		border-radius: 0 0 10px 10px;
+		padding:1em 0 1em 3em;
+	}
+	/* Skills Tab */
+	.skilList ul {
+		float:left;
+		margin-top:1em;
+		font-size:1em;
+		line-height:1em;
+		text-align:left;
+		color:#666;
+	}
+	.skilList ul li.title {
+		font-size:1.5em;
+		font-weight:bold;
+		color:#336699;
+		padding-bottom:.5em;
+		margin-left:-.5em;
+		text-decoration: underline;
+	}
+	/* Work Tab */
+	div.work {
+		padding: .5em;
+	}
+	div.employerInfo {
+		margin:.9em .2em;
+		font-size:1em;
+		line-height:1em;
+		text-align:justify;
+	}
+	div.employerInfo div.empTitle {
+		font-weight:bold;
+		float:left;
+		font-size:1.5em;
+		line-height:1.5em;
+	}
+	div.employerInfo div.empDate {
+		float:right;
+		font-style:italic;
+	}
+	/* Education Tab */
+	div.education {
+		padding:1em;
+	}
+	.education ul {
+		float:left;
+		font-size:1em;
+		line-height:1em;
+		padding-bottom:.5em;
+	}
+	.education ul li.title {
+		font-size:1.2em;
+		font-weight:bold;
+		color:#336699;
+		padding-bottom:.2em;
+		margin-left:-.2em;
+		text-decoration: underline;
+	}
+	.education ul.ibm {
+		font-weight:normal;
+		font-size:1em;
+	}
+	.education ul.ibm li {
+		font-weight:normal;
+		font-size:1em;
+		margin-left:1em;
+	}
+	.education ul.formal li:nth-child(odd) {
+		text-align:right;
+		margin-right:3em;
+	}
+	.education ul.formal li.title {
+		text-align:left;
+	}
+	.education ul.ibm li:first-child {
+		margin-left:0;
+		text-decoration:underline;
+	}
+}
+
+/* === Mobile devices - Landscape (480px wide) === */
+@media only screen and (min-width : 30em) {
+
+}
+
+/* === Tablet devices - Portrait (768px wide) === */
+@media only screen and (min-width : 48em) {
+
+	ul.nav {
+		padding-left:2em;
+	}
+	ul.nav li {
+		margin: 0 2em 0 0;
+	}
+
+	/* Skills Tab */
+	.skilList ul {
+		width:33.33%;
+	}
+
+	/* Work Tab */
+	div.work {
+		padding:1.5em;
+	}
+	div.employerInfo {
+		font-size:1.2em;
+		line-height:1.3em;
+	}
+	
+	div.employerInfo div.empDate {
+		margin-right:2.5em;
+	}
+	
+	/* Education Tab */
+	div.education {
+		padding:2em;
+	}
+	.education ul {
+		font-size:1.25em;
+		line-height:1.25em;
+	}
+	.education ul li.title {
+		margin-left:-.5em;
+	}
+}
+
+/* === Tablet devices - Landscape (1024px wide) === */
+@media only screen and (min-width : 64em) {
+	section.resume {
+		margin:5em auto;
+		width:80%;
+	}
+
+	/* Skills Tab */
+	.skilList ul {
+		width:33.33%;
+		font-size:1.5em;
+		line-height:1.5em;
+	}
+	.skilList ul li.title {
+		padding-bottom:.2em;
+	}
+
+	/* Education Tab */
+	.education ul {
+		width:50%;
+	}
+}
+
+/* === Netbook devices (1224px wide) === */
+@media only screen and (min-width : 76.5em) {
+
+}
+
+/* === Desktop devices (1300px wide) === */
+
+@media only screen and (min-width : 81.25em) {
+
+}
+
+

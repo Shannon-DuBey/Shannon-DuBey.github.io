@@ -1,7 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="sdPortfolio">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/resume.css" />
+    <script type="text/javascript" src="script/angular.min.js"></script>
+    <script type="text/javascript" src="script/angularTabs.js"></script>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+	<p>
+		<h1>Shannon DuBey</h1>
+		<h2>Front End / UI / UX / Web Developer</h2>
+	</p>
+	<section ng-controller="TabController as tab" class="resume">
+		<ul class="nav">
+			<li ng-class="{active:tab.isSet(1)}">
+				<a href ng-click="tab.setTab(1)">What I know</a>
+			</li>
+			<li ng-class="{active:tab.isSet(2)}">
+				<a href ng-click="tab.setTab(2)">Where I Worked</a>
+			</li>
+			<li ng-class="{active:tab.isSet(3)}">
+				<a href ng-click="tab.setTab(3)">Where I Learned</a>
+			</li>
+		</ul>
+		
+		<section class="tab" ng-show="tab.isSet(1)">
+			<div class="tabContent skilList">
+					<ul class="uiSkills">
+					<li class="title">Front End</li>
+					<li>HTML</li>
+					<li>CSS - including transitions</li>
+					<li>LESS</li>
+					<li>JavaScript</li>
+					<li>jQuery</li>
+					<li>AngularJS</li>
+					<li>Freemarker (FTL)</li>
+					<li>XML</li>
+				</ul>
+
+				<ul class="serverSkills">
+					<li class="title">Server Side</li>
+					<li>PHP</li>
+					<li>MySQL</li>
+					<li>Ajax</li>
+					<li>JSON</li>
+					<li>Java</li>
+					<li>C++</li>
+					<li>Oracle</li>
+				</ul>
+				<ul class="miscSkills">
+					<li class="title">The Rest</li>
+					<li>Eclipse</li>
+					<li>SVN</li>
+					<li>Adobe CQ</li>
+					<li>CMS</li>
+					<li>MS Visual Studio</li>
+					<li>Cross Browser compatibility</li>
+					<li>localization of web sites</li>
+					<li>Responsive Web Site Design</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+		</section>
+		<section class="tab" ng-show="tab.isSet(2)">
+			<div class="tabContent work">
+				<div class="employerInfo">
+					<div class="empTitle">IBM</div>
+					<div class="empDate">~ 07/2012 - Current</div>
+					<div class="clear"></div>
+					<p class="bold">Web Developer</p>
+					<p>
+						I am responsible for developing web sites and pages for a high profile client on very tight
+						schedules in a multi-vendor environment. I work closely with vendors and our Java back end
+						team to troubleshoot existing sites and pages to resolve issues in a timely fashion. As well
+						as play a key role in site development for a redesigned fully responsive web application that
+						integrates FTL, HTML, CSS/LESS, AngularJS, JSON/Ajax, Java, and Adobe CQ into one
+						cohesive environment for optimal user experiences.
+					</p>
+				</div>
+				<div class="employerInfo">
+					<div class="empTitle">1107 Designs</div>
+					<div class="empDate">~ 01/2000 - 07/2012</div>
+					<div class="clear"></div>
+					<p class="bold">Freelance Web Developer</p>
+					<p>
+						As a freelance Web Designer I was responsible for the planning, design, and implementation
+						of complete web sites, re-tooling existing layouts for an up to date appearance, and adding
+						additional pages to existing web sites and applications. All work was designed with standards
+						compliant code with emphasis on browser cross-compatibility, accessibility, and search
+						engine optimization.
+					</p>
+				</div>
+				<div class="employerInfo">
+					<div class="empTitle">BrassCraft Manufacturing</div>
+					<div class="empDate">~ 01/2004 - 01/2012</div>
+					<div class="clear"></div>
+					<p class="bold">Altiris/Network Admin & Web Master of Internal Sites</p>
+					<p>
+						I was responsible for the management of all Novell web based management applications
+						and the Apache/Tomcat server(s) as well as the creation of an internal web site for the
+						centralization of web based troubleshooting tools in the Tech Support Department. I was
+						also responsible for the management of Altiris .net web server(s) and software, the Microsoft
+						SQL Server 2000 - 2008 backend management and the daily maintenance/troubleshooting/
+						repair of all office technology to include desktops, laptops, servers, network equipment, and
+						servers.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="tab" ng-show="tab.isSet(3)">
+			<div class="tabContent education">
+				<ul>
+					<li class="title">Current Non-Formal Education</li>
+					<li>JS Clarity in Under A Day (Hack Reactor 5/14)</li>
+					<li>CodeSchool</li>
+					<li><ul class="ibm">
+							<li>Internal IBM Training:</li>
+							<li>JavaScript</li>
+							<li>HTML5</li>
+							<li>CSS Transitions</li>
+							<li>AngularJS</li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul class="formal">
+					<li class="title">Formal Education</li>
+					<li class="bold">Bachelor in Web Development</li>
+					<li class="italic">Baker College - 2011</li>
+					<li class="bold">Associate in Networking Technology - CISCO</li>
+					<li class="italic">Baker College - 2004</li>
+					<li class="bold">Associate in Networking Technology - Novell</li>
+					<li class="italic">Baker College -2001</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+		</section>
+	</section>
 </body>
 </html>
