@@ -1,142 +1,98 @@
 <!DOCTYPE html>
-<html ng-app="sdPortfolio">
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link rel="stylesheet" type="text/css" href="css/resume.css" />
-    <script type="text/javascript" src="script/angular.min.js"></script>
-    <script type="text/javascript" src="script/angularTabs.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="css/main.css" type="text/css" />
+	<link rel="stylesheet" href="css/resume.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+
+	<!-- Bootstrap core CSS -->
+    <link href="/css/carousel.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Angular -->
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular-animate.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="script/angularMain.js"></script>
+	<script type="text/javascript" src="script/main.js"></script>
+
 </head>
-
-<body>
-	<p>
-		<h1>Shannon DuBey</h1>
-		<h2>Front End / UI / UX / Web Developer</h2>
-	</p>
-	<section ng-controller="TabController as tab" class="resume">
-		<ul class="nav">
-			<li ng-class="{active:tab.isSet(1)}">
-				<a href ng-click="tab.setTab(1)">What I know</a>
-			</li>
-			<li ng-class="{active:tab.isSet(2)}">
-				<a href ng-click="tab.setTab(2)">Where I Worked</a>
-			</li>
-			<li ng-class="{active:tab.isSet(3)}">
-				<a href ng-click="tab.setTab(3)">Where I Learned</a>
-			</li>
-		</ul>
-		
-		<section class="tab" ng-show="tab.isSet(1)">
-			<div class="tabContent skilList">
-					<ul class="uiSkills">
-					<li class="title">Front End</li>
-					<li>HTML</li>
-					<li>CSS - including transitions</li>
-					<li>LESS</li>
-					<li>JavaScript</li>
-					<li>jQuery</li>
-					<li>AngularJS</li>
-					<li>Freemarker (FTL)</li>
-					<li>XML</li>
-				</ul>
-
-				<ul class="serverSkills">
-					<li class="title">Server Side</li>
-					<li>PHP</li>
-					<li>MySQL</li>
-					<li>Ajax</li>
-					<li>JSON</li>
-					<li>Java</li>
-					<li>C++</li>
-					<li>Oracle</li>
-				</ul>
-				<ul class="miscSkills">
-					<li class="title">The Rest</li>
-					<li>Eclipse</li>
-					<li>SVN</li>
-					<li>Adobe CQ</li>
-					<li>CMS</li>
-					<li>MS Visual Studio</li>
-					<li>Cross Browser compatibility</li>
-					<li>localization of web sites</li>
-					<li>Responsive Web Site Design</li>
-				</ul>
-				<div class="clear"></div>
+<body ng-app="sdPortfolio">
+	<!-- modal -->
+	<section id="modal">
+		<section id="modalBg"></section>
+		<section id="modalContainer">
+			<div class="modalClose">
+				<p class="menuItem">X</p>
 			</div>
-		</section>
-		<section class="tab" ng-show="tab.isSet(2)">
-			<div class="tabContent work">
-				<div class="employerInfo">
-					<div class="empTitle">IBM</div>
-					<div class="empDate">~ 07/2012 - Current</div>
-					<div class="clear"></div>
-					<p class="bold">Web Developer</p>
-					<p>
-						I am responsible for developing web sites and pages for a high profile client on very tight
-						schedules in a multi-vendor environment. I work closely with vendors and our Java back end
-						team to troubleshoot existing sites and pages to resolve issues in a timely fashion. As well
-						as play a key role in site development for a redesigned fully responsive web application that
-						integrates FTL, HTML, CSS/LESS, AngularJS, JSON/Ajax, Java, and Adobe CQ into one
-						cohesive environment for optimal user experiences.
-					</p>
-				</div>
-				<div class="employerInfo">
-					<div class="empTitle">1107 Designs</div>
-					<div class="empDate">~ 01/2000 - 07/2012</div>
-					<div class="clear"></div>
-					<p class="bold">Freelance Web Developer</p>
-					<p>
-						As a freelance Web Designer I was responsible for the planning, design, and implementation
-						of complete web sites, re-tooling existing layouts for an up to date appearance, and adding
-						additional pages to existing web sites and applications. All work was designed with standards
-						compliant code with emphasis on browser cross-compatibility, accessibility, and search
-						engine optimization.
-					</p>
-				</div>
-				<div class="employerInfo">
-					<div class="empTitle">BrassCraft Manufacturing</div>
-					<div class="empDate">~ 01/2004 - 01/2012</div>
-					<div class="clear"></div>
-					<p class="bold">Altiris/Network Admin & Web Master of Internal Sites</p>
-					<p>
-						I was responsible for the management of all Novell web based management applications
-						and the Apache/Tomcat server(s) as well as the creation of an internal web site for the
-						centralization of web based troubleshooting tools in the Tech Support Department. I was
-						also responsible for the management of Altiris .net web server(s) and software, the Microsoft
-						SQL Server 2000 - 2008 backend management and the daily maintenance/troubleshooting/
-						repair of all office technology to include desktops, laptops, servers, network equipment, and
-						servers.
-					</p>
-				</div>
-			</div>
-		</section>
-		<section class="tab" ng-show="tab.isSet(3)">
-			<div class="tabContent education">
-				<ul>
-					<li class="title">Current Non-Formal Education</li>
-					<li>JS Clarity in Under A Day (Hack Reactor 5/14)</li>
-					<li>CodeSchool</li>
-					<li><ul class="ibm">
-							<li>Internal IBM Training:</li>
-							<li>JavaScript</li>
-							<li>HTML5</li>
-							<li>CSS Transitions</li>
-							<li>AngularJS</li>
-						</ul>
-					</li>
-				</ul>
-
-				<ul class="formal">
-					<li class="title">Formal Education</li>
-					<li class="bold">Bachelor in Web Development</li>
-					<li class="italic">Baker College - 2011</li>
-					<li class="bold">Associate in Networking Technology - CISCO</li>
-					<li class="italic">Baker College - 2004</li>
-					<li class="bold">Associate in Networking Technology - Novell</li>
-					<li class="italic">Baker College -2001</li>
-				</ul>
-				<div class="clear"></div>
+			<div class="modalContent">
+				<p>Pardon my dust!</p>
+				<p>This functionality is not yet available</p>
 			</div>
 		</section>
 	</section>
+	<div id="wrapper" class="container-fluid">
+		<section id="header">
+			<!-- Fixed navbar -->
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container">
+					<div class="navbar-header">
+						<!-- mobile menu buttons-->
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand hideLg" href="index.html">Shannon DuBey <p>UI/UX/Web Developer</p></a>
+						<!-- end mobile menu buttons -->
+					</div>
+					<div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="#about" class="menuItem">About Me</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Work <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#" class="menuItem">Gallery</a></li>
+									<li><a href="#">Resume</a></li>
+									<li role="separator" class="divider"></li>
+									<li class="dropdown-header">Live Sites</li>
+									<li><a href="http://www.tiffany.com/Expertise/Diamond/DiamondHeritage.aspx" target="_blank">Tiffany &amp; Co.</a></li>
+									<li><a href="http://mycokerewards.com" target="_blank">My Coke Rewards</a></li>
+								</ul>
+							</li>
+							<li><a href="#contact" class="menuItem">Contact</a></li>
+						</ul>
+					</div><!--/.nav-collapse -->
+				</div>
+			</nav>
+
+			<h2 class="hideSm">Shannon DuBey</h2>
+			<p class="hideSm">UI / UX / Web Developer</p>
+		</section>
+
+		<section id="main">
+			<section id="resume">
+				<section ng-controller="TabController as tab" class="resume">
+					<sd-resume></sd-resume>
+				</section>
+				<p>* You can also download my full resume in PDF form - but it's not as cool as this interactive version</p>
+			</section>
+		</section>
+				
+		<section id="footer">  
+			<h4>Please send me an email or conect with me on LinkedIn if you have a position in mind for my skills. I am always looking for new opportunities to expand my knowledge, grow my skills, and further my career in Front End Web Development.</h4>
+		</section>
+	</div>
+
+	<!-- JavaScript Includes -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
 </body>
+
 </html>

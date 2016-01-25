@@ -1,32 +1,49 @@
 #resume {
-	background-color:#fff;
-	padding:.5em 0;
+	padding:.5em;
+	margin-top:-2em;
+	max-height:100%;
+	position:relative;
+	z-index:200; /* set below z-index of modalBg */
+}
+#resume h3 {
+	color:#59A3F5;
+	font-weight:bold;
+	font-size:2.5em;
+	line-height:3em;
+	margin-left:10%;
+}
+#resume p {
+	margin-left:10%;
+	vertical-align: baseline;
+	color:#1B5428;
 }
 
 /* === Mobile devices - Portrait (320px wide) === */
 @media only screen and (min-width : 20em) {
 	section.resume {
-		margin:5em auto;
+		margin:0 auto 2em auto;
 		width:95%;
 	}
 	/* navigation links */
-	ul.nav {
-		margin: 1em 0 0 0;
+	ul.tabLinks {
+		margin: 1em 0 -3px 0;
 		padding-left:.5em;
 		padding-bottom:.2em;
-		border-bottom: 1px solid #666;
 	}
-	ul.nav li {
+	ul.tabLinks li {
 		display:inline-block;
 		margin: 0 auto;
 		font-size:1.5em;
-		padding-bottom:.2em;
+		padding:0 1em;
 	}
-	ul.nav li.active a {
+	ul.tabLinks li.active {
+		background-color:#333;
+	}
+	ul.tabLinks li.active a {
 		color:#59A3F5;
 		font-weight:bold;
 	}
-	ul.nav li a {
+	ul.tabLinks li a {
 		text-decoration: none;
 		color:#666;
 		font-weight:bold;
@@ -34,10 +51,12 @@
 
 	/* gobal display settings */
 	div.tabContent {
-		border:1px solid #337AB7;
-		border-top:0px;
+		border:1px solid #666;
+		border-bottom: 1px solid #666;
 		border-radius: 0 0 10px 10px;
 		padding:1em 0 1em 3em;
+		background-color:#bbb;
+		position:absolute.;
 	}
 	/* Skills Tab */
 	.skilList ul {
@@ -46,12 +65,12 @@
 		font-size:1em;
 		line-height:1em;
 		text-align:left;
-		color:#666;
+		color:#1B5428;
 	}
 	.skilList ul li.title {
 		font-size:1.5em;
 		font-weight:bold;
-		color:#336699;
+		color:#3A6BA2;
 		padding-bottom:.5em;
 		margin-left:-.5em;
 		text-decoration: underline;
@@ -71,10 +90,15 @@
 		float:left;
 		font-size:1.5em;
 		line-height:1.5em;
+		color:#3A6BA2;
 	}
 	div.employerInfo div.empDate {
 		float:right;
 		font-style:italic;
+		color:#333;
+	}
+	div.employerInfo p.jobTitle {
+		color:#333 !important;
 	}
 	/* Education Tab */
 	div.education {
@@ -85,11 +109,12 @@
 		font-size:1em;
 		line-height:1em;
 		padding-bottom:.5em;
+		color:#1B5428;
 	}
 	.education ul li.title {
 		font-size:1.2em;
 		font-weight:bold;
-		color:#336699;
+		color:#3A6BA2;
 		padding-bottom:.2em;
 		margin-left:-.2em;
 		text-decoration: underline;
@@ -102,6 +127,7 @@
 		font-weight:normal;
 		font-size:1em;
 		margin-left:1em;
+		color:#1B5428;
 	}
 	.education ul.formal li:nth-child(odd) {
 		text-align:right;
@@ -113,21 +139,21 @@
 	.education ul.ibm li:first-child {
 		margin-left:0;
 		text-decoration:underline;
+		color:#3A6BA2;
+		margin-top:1em;
 	}
-}
-
-/* === Mobile devices - Landscape (480px wide) === */
-@media only screen and (min-width : 30em) {
-
+	span.courseLoc,
+	li.gradDate {
+		color:#333;
+	}
 }
 
 /* === Tablet devices - Portrait (768px wide) === */
 @media only screen and (min-width : 48em) {
-
-	ul.nav {
+	ul.tabLinks {
 		padding-left:2em;
 	}
-	ul.nav li {
+	ul.tabLinks li {
 		margin: 0 2em 0 0;
 	}
 
@@ -165,7 +191,6 @@
 /* === Tablet devices - Landscape (1024px wide) === */
 @media only screen and (min-width : 64em) {
 	section.resume {
-		margin:5em auto;
 		width:80%;
 	}
 
@@ -183,17 +208,6 @@
 	.education ul {
 		width:50%;
 	}
-}
-
-/* === Netbook devices (1224px wide) === */
-@media only screen and (min-width : 76.5em) {
-
-}
-
-/* === Desktop devices (1300px wide) === */
-
-@media only screen and (min-width : 81.25em) {
-
 }
 
 
