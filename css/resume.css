@@ -1,3 +1,7 @@
+.smItalic {
+	font-size:.75em;
+	font-style: italic;
+}
 #resume {
 	padding:.5em;
 	margin-top:-2em;
