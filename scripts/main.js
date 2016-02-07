@@ -20,14 +20,26 @@ $(document).ready(function(){
 	doc.setAttribute('data-useragent', navigator.userAgent);
 	
 	/* page load delay  */
-	setTimeout(function(){
-		$('#wrapper').removeClass('hidden');
+	if ($(window).width() > 700) {
+		setTimeout(function(){
+			$('#wrapper').removeClass('hidden');
+			$('#wrapper').fadeIn(300,'linear');
+		}, 6650);
+	} else {
+ 		$('#wrapper').removeClass('hidden');
 		$('#wrapper').fadeIn(300,'linear');
-		//$('#wrapper').slideDown();
-	}, 6650);
+	}
 	
+	/* fill in email address */
+	$('#mailAddress').html('techieshane');
+	$('#mailDomain').html('yahoo');
 
-	$('.menuItem').click(function() {
+	$('.menuItem').click(function(underConst) {
+		$('#construction').addClass('hidden');
+		toggleDiv('modal');
+	});
+	$('.constMenuItem').click(function() {
+		$('#construction').removeClass('hidden');
 		toggleDiv('modal');
 	});
 
