@@ -71,7 +71,7 @@
 		</section>
 	</section>
 
-	<!-- intro container -->
+	<!-- intro container 
 	<div id="introContainer">
 		<div id="introContent">
 			<div class="shadow"></div>
@@ -84,8 +84,9 @@
 			<p id="spinner">Working Magic</p>
 		</div>
 	</div>
+	-->
 
-	<div id="wrapper" class="container-fluid collapse">
+	<div id="wrapper" class="container-fluid collapse" ng-controller="sdubeyController">
 		<section id="header">
 			<!-- Fixed navbar -->
 			<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -103,12 +104,12 @@
 					</div>
 					<div id="navbar" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
-							<li><a href="#about" class="constMenuItem">About Me</a></li>
+							<li><a href="" ng-click="menuClick(1)">About Me</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Work <span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="files/sDuBeyPortfolio.pdf" target="_blank">Past Work Examples</a></li>
-									<li><a href="#">Resume</a></li>
+									<li><a href="" ng-click="menuClick(2)">Resume</a></li>
 									<li><a href="https://www.linkedin.com/in/shannon-dubey-88744447" target="_blank">LinkedIn Profile</a>
 									<li role="separator" class="divider"></li>
 									<li><a href="https://github.com/Shannon-DuBey" target="_blank">GitHub</a>
@@ -129,12 +130,20 @@
 		</section>
 
 		<section id="main">
-			<section id="resume">
+
+			<section id="aboutMe" ng-if="viewAbout">
+				<section class="about">
+					<sd-about></sd-about>
+				</section>
+			</section>
+
+			<section id="resume" ng-if="viewResume">
 				<section ng-controller="TabController as tab" class="resume">
 					<sd-resume></sd-resume>
 				</section>
 				<p>* You can also download my full resume in PDF form <a href="files/sdubeyCV.pdf" target="_blank">HERE</a> - but it's not as cool as this interactive version</p>
 			</section>
+
 		</section>
 				
 		<section id="footer">  

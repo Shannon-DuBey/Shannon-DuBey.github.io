@@ -1,0 +1,169 @@
+#sliderWrapper {
+	position:relative;
+	margin:0 auto;
+	z-index:10;
+}
+
+/* Slider Setup */
+input {
+	display: none;
+}
+
+#overflow {
+	width: 100%;
+	overflow: hidden;
+}
+article img {
+	width: 100%;
+}
+#slides .inner {
+	width: 500%; /*100% * num of images */
+	line-height: 0;
+}
+#slides article {
+	width: 20%;
+	float: left;
+}
+
+/* Info Box */
+.info {
+	line-height: 1.666em;
+	margin: .5em .5em -150%;
+	position: absolute;
+	font-style: italic;
+	padding: 1.5em;
+	opacity: 0;
+	background-color:#cfcfcf;
+	color: #000;
+	text-align: left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.info.textOnlySlide {
+	line-height: 2em;
+	margin: 1.5em 1.5em -150%;
+	position: absolute;
+	padding: 2em;
+	text-align: center;
+}
+.info h2 {
+	color: #000;
+	margin: 0 0 5px;
+	font-weight: bold;
+	font-size: 3em;
+	line-height:3.5em;
+	font-style: normal;
+}
+.info h3 {
+	color: #333;
+	margin: 0 0 5px;
+	font-weight: normal;
+	font-size: 1.834em;
+	font-style: normal;
+}
+.info a {
+	color:#000;
+	font-size:1.25em;
+	line-height:1.5em;
+}
+
+/* Slider Styling */
+#slides {
+	margin: 45px 0 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 4px #666;
+	padding: 1%;
+	background: #fff;
+	background: rgb(252,255,244); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(252,255,244,1) 0%, rgba(219,218,201,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,255,244,1)), color-stop(100%,rgba(219,218,201,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#dbdac9',GradientType=0 ); /* IE6-9 */
+}
+
+/* Animation */
+#slides .inner {
+	-webkit-transform: translateZ(0);
+	-webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+	-moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -ms-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -o-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+
+	-webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+	-moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+
+    position: relative;
+  	width: 500%; /* 100% * num of slides */
+	animation: 30s slider infinite; /* number of slides * duration of display for each */
+}
+@keyframes slider { /* this is based on 5 slides in the deck (first and last slide must be the same) */
+	0% { left: 0%; }
+	20% { left: 0%; }
+	25% { left: -100%; }
+	45% { left: -100%; }
+	50% { left: -200%; }
+	70% { left: -200%; }
+	75% { left: -300%; }
+	95% { left: -300%; }
+	100% { left: -400%; }
+}
+
+#sliderWrapper {
+	-webkit-transform: translateZ(0);
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+	max-width:90%;
+}
+
+#slides, .info h3 {
+	-webkit-transform: translateZ(0);
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+
+/* Mobile devices (up to 450px wide)*/
+@media only screen and (max-width: 28.125em) {
+	#sliderWrapper #slides {
+		padding:0;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+	}
+	#sliderWrapper #slides .info {
+		opacity: 0 !important; /* hide image info boxes on mobile */
+	}
+}
+
+/* Tablet Devices (up to 850px wide) */
+@media only screen and (max-width: 53.125em) {
+	#sliderWrapper #slides {
+		padding:0;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+	}
+}
+
+/* Laptop & Desktops W/small screens (> 850px < 1024px wide) */
+@media only screen and (max-width: 64em) {
+
+}
+
+/* Large Screen devices (> 1200px wide) */
+@media only screen and (min-width: 75em) {
+
+}

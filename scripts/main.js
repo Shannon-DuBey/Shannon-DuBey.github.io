@@ -20,6 +20,7 @@ $(document).ready(function(){
 	doc.setAttribute('data-useragent', navigator.userAgent);
 	
 	/* page load delay  */
+	/*
 	if ($(window).width() > 700) {
 		setTimeout(function(){
 			$('#wrapper').removeClass('hidden');
@@ -29,6 +30,9 @@ $(document).ready(function(){
  		$('#wrapper').removeClass('hidden');
 		$('#wrapper').fadeIn(300,'linear');
 	}
+	*/
+	$('#wrapper').removeClass('hidden');
+	$('#wrapper').fadeIn(300,'linear');
 	
 	/* fill in email address */
 	$('#mailAddress').html('techieshane');
@@ -36,10 +40,6 @@ $(document).ready(function(){
 
 	$('.menuItem').click(function(underConst) {
 		$('#construction').addClass('hidden');
-		toggleDiv('modal');
-	});
-	$('.constMenuItem').click(function() {
-		$('#construction').removeClass('hidden');
 		toggleDiv('modal');
 	});
 
