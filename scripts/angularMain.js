@@ -15,6 +15,8 @@
 	    $scope.viewAbout = true;
 		$scope.viewResume = false;
 		$scope.viewCarousel = false;
+		$scope.hidepgUpLink = true;
+		$scope.hidepgDownLink = false;
 		console.log('viewAbout: ' + $scope.viewAbout);
 		console.log('viewResume: ' + $scope.viewResume);
 
@@ -46,12 +48,23 @@
 			if ($('#contOne').hasClass('active')) {
 				$('#contOne').removeClass('active').fadeOut('5000');
 				$('#contTwo').addClass('active').fadeIn('10000');
+				$scope.hidepgUpLink = false;
 			} else if($('#contTwo').hasClass('active')) {
 				$('#contTwo').removeClass('active').fadeOut('5000');
 				$('#contThree').addClass('active').fadeIn('10000');
+				$scope.hidepgDownLink = true;
+			} 
+		};
+		$scope.aboutPgUpClick = function() {
+			console.log('pgDownLink clicked');
+			if ($('#contTwo').hasClass('active')) {
+				$('#contTwo').removeClass('active').fadeOut('5000');
+				$('#contOne').addClass('active').fadeIn('10000');
+				$scope.hidepgUpLink = true;
 			} else {
 				$('#contThree').removeClass('active').fadeOut('5000');
-				$('#contOne').addClass('active').fadeIn('10000');
+				$('#contTwo').addClass('active').fadeIn('10000');
+				$scope.hidepgDownLink = false;
 			}
 		};
 	});
