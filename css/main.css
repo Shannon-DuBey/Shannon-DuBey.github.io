@@ -21,7 +21,27 @@
 .bold {
 	font-weight: 700;
 }
+body {
+	overflow: hidden;
+}
+/* ------------- */
 
+/* bootstrap overrides */
+.container {
+    padding-left: 40px!important;
+}
+body, p, h5, h6 {
+	font-family: 'Roboto', sans-serif!important;
+}
+h1, h2, h3, h4 {
+	font-family: 'Open Sans', sans-serif!important;
+}
+.navbar-fixed-top {
+	z-index: 230 !important;
+}
+/* ------------- */
+
+/* Main layout */
 #wrapper,
 #header,
 #main,
@@ -45,7 +65,7 @@
 	-webkit-box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.8), inset 0 -20px 20px -20px rgba(0, 0, 0, 0.8);
 	-moz-box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.8), inset 0 -20px 20px -20px rgba(0, 0, 0, 0.8);
 	box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.8), inset 0 -20px 20px -20px rgba(0, 0, 0, 0.8);
-	height: 69%;
+	height: 75%;
 	margin: 0 auto;
 	background-image: url('../images/grey_fabric_bg.jpg');
 }
@@ -56,11 +76,13 @@
 
 #footer h4 {
 	width: 90%;
-	margin-left: 5%;
+	margin: .25em auto;
 	text-align: center;
 	font-size: 1em;
 	line-height: 1.1em;
 	padding-bottom: 1%;
+    color: #cfcfcf;
+    text-shadow: 2px 2px rgba(0, 0, 0, .5);
 }
 
 #myCarousel {
@@ -139,10 +161,11 @@
 	vertical-align: baseline;
 	max-width: 1.75em;
 }
+/* ------------- */
 
-/* about Me Section */
+/* About Me Section */
 section#aboutLeft {
-	width:20%;
+	width:17%;
 	display:inline-block;
 }
 Section#aboutLeft img {
@@ -152,10 +175,10 @@ Section#aboutLeft img {
 }
 
 section#aboutRight {
-	width:75%;
+	width:80%;
 	display: inline-block;
 	color:#000;
-		margin-top: -4em;
+	margin-top: -4em;
 }
 #aboutContent {
 	margin: 45px 0 0;
@@ -176,7 +199,10 @@ section#aboutRight {
 	height:37.5em;
 	overflow:auto;
 	position:relative;
-
+}
+#aboutContent > .content h2 {
+	
+	text-align: center;
 }
 #aboutContent > .content p,
 .pgDownLink {
@@ -190,19 +216,20 @@ section#aboutRight {
 	top:0;
 	left:0;
 	padding:2%;
+	width: 100%;
 }
 #pgDownLink,
 #pgUpLink {
 	width:100%;
 	position:absolute;
-	bottom:40%;
+	bottom:50%;
 	cursor: pointer;
 }
 #pgDownLink {
-	left:103.8em;
+	left:93.75%;
 }
 #pgUpLink {
-	left: 22.5em;
+	left: 17.1%;
 }
 #pgDownLink a,
 #pgUpLink a {
@@ -255,45 +282,53 @@ section#aboutRight {
     }
 }
 
+
 /* rotating cards */
 .card-container {
-  cursor: pointer;
-  height: 150px;
-  perspective: 600;
-  position: relative;
-  width: 150px;
-  display:inline-block;
+	cursor: pointer;
+	height: 150px;
+	perspective: 600;
+	position: relative;
+	width: 150px;
+	display:inline-block;
+	margin-left: 1em;
 }
 .card {
-  height: 100%;
-  position: absolute;
-  transform-style: preserve-3d;
-  transition: all 1s ease-in-out;
-  width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	transition: all 1s ease-in-out;
+	width: 100%;
+	-webkit-box-shadow: inset 0px 0px 33px 1px rgba(0,0,0,0.77);
+	-moz-box-shadow: inset 0px 0px 33px 1px rgba(0,0,0,0.77);
+	box-shadow: inset 0px 0px 33px 1px rgba(0,0,0,0.77);
+    border-radius: 5px;
+	box-sizing: border-box;
 }
 .card:hover {
-  transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 .card .side {
-  backface-visibility: hidden;
-  border-radius: 6px;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  width: 100%;
+	backface-visibility: hidden;
+	border-radius: 6px;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	text-align: center;
+	padding: 5.75%;
 }
 .card .side img {
-	max-width:150px;
+	max-width:130px;
 }
 .card .back {
-  background: #eaeaed;
-  color: #0087cc;
-  text-align: center;
-  transform: rotateY(180deg);
-  padding:10% 3%;
+	background: #eaeaed;
+	color: #0087cc;
+	text-align: center;
+	transform: rotateY(180deg);
+	padding:10% 3%;
 }
-
-
+/* ----End Rotatine Cards --------- */
 
 /* 3d cube */
 #threeDCube {
@@ -332,6 +367,9 @@ section#aboutRight {
 .cubeCaption h3 {
     font-weight: bold;
 }​
+/* ---End 3d cube ---------- */
+
+/* --- End About Me ---------- */
 
 
 /* small screens */
@@ -357,6 +395,7 @@ section#aboutRight {
 	}
 
 }
+/* ------------- */
 
 /* tablets and up */
 @media (min-width:768px) {
@@ -366,8 +405,16 @@ section#aboutRight {
 
 	.hideSm {
 		display: block;
+		
 	}
-
+	.hideSm.name {
+		position: relative;
+		top: -.85em;
+	}
+	.hideSm.title {
+		position: relative;
+		top: -1.5em;
+	}
 	#introContainer {
 		display: block;
 	}
@@ -459,6 +506,7 @@ section#aboutRight {
 		}
 
 	}
+	/* ---- End Intro --------- */
 
 	/* spinner */
 	#spinner {
@@ -502,8 +550,8 @@ section#aboutRight {
 		to {
 			transform: rotate(360deg);
 		}
-
 	}
+	/* ---- End Spinner --------- */
 
 	#modalContainer {
 		width: 30%;
@@ -525,7 +573,7 @@ section#aboutRight {
 	}
 
 	#header {
-		min-height: 8.6em;
+		min-height: 5em;
 		background-image: url('../images/lights_top.jpg');
 		background-repeat: no-repeat;
 		background-size: 100%;
@@ -551,6 +599,7 @@ section#aboutRight {
 	}
 
 }
+/* ------------- */
 
 /* large screens */
 @media (min-width:1280px) {
@@ -574,8 +623,5 @@ section#aboutRight {
 	}
 
 }
+/* ------------- */
 
-/* bootstrap hacks */
-.navbar-fixed-top {
-	z-index: 230 !important;
-}

@@ -21,6 +21,29 @@
 	vertical-align: baseline;
 	color:#1B5428;
 }
+#resume p.download {
+	top: 0;
+    left: 5%;
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #337ab7;
+}
+
+#resume p.download a {
+	color: #fff;
+	letter-spacing: 2px;
+	font-style: italic;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+#resume p.download a::before,
+#resume p.download a::after {
+	content: '\00a0';
+}
+#resume p.download a:visited {
+	color: #888;
+}
 
 /* === Mobile devices - Portrait (320px wide) === */
 @media only screen and (min-width : 20em) {
@@ -55,12 +78,9 @@
 
 	/* gobal display settings */
 	div.tabContent {
-		border:1px solid #666;
-		border-bottom: 1px solid #666;
-		border-radius: 0 0 10px 10px;
 		padding:1em 0 1em 3em;
-		background-color:#bbb;
 		position:absolute.;
+		height: 100%;
 	}
 	/* Skills Tab */
 	.skilList ul {
@@ -154,6 +174,15 @@
 
 /* === Tablet devices - Portrait (768px wide) === */
 @media only screen and (min-width : 48em) {
+	.tab {
+		height:40em;
+		overflow-y: auto;
+		overflow-x: hidden;
+		border:1px solid #666;
+		border-bottom: 1px solid #666;
+		border-radius: 0 0 10px 10px;
+		background-color:#bbb;
+	}
 	ul.tabLinks {
 		padding-left:2em;
 	}
@@ -189,6 +218,10 @@
 	}
 	.education ul li.title {
 		margin-left:-.5em;
+	}
+	#resume p.download {
+		top: -2.5em;
+   		left: 15%;
 	}
 }
 

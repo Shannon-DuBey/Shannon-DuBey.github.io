@@ -13,7 +13,6 @@
   	display:inline-block;
   	margin: 2.5em 8em 9em 4em;
     width:200px;
-    height:200px;
   }
     @-webkit-keyframes spincube {
       from,to  { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
@@ -201,7 +200,7 @@
     -moz-box-shadow: 0px 15px 18px -10px rgba(136,136,136,1);
     box-shadow: 0px 15px 18px -10px rgba(136,136,136,1);
     position:absolute;
-    top:85%;
-    right:2%;
+    top: 0;
+    left: -3em;
   }
 }
