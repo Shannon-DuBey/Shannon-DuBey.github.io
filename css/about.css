@@ -73,7 +73,7 @@
 	#aboutContent > .content p,
 	.pgDownLink {
 		color:#000;
-		padding:1%;
+		padding:.5%;
 		font-size: 1.15em;
 	}
 
@@ -153,17 +153,40 @@
 	/* ----------------- */
 
 	/* Page 1 */
+	#contOne h2 {
+		background-image: url('../images/darkFabricBg.png');
+		position: absolute;
+	    top: -.5em;
+	    left: -.25em;
+	    width: 100%;
+	    padding: 1em;
+	    color: #77b8e0!important;
+	}
+	#contOne p {
+		margin-top: 3.8em;
+	}
 	.cube1,
 	.cube2,
 	.tagCloud {
 		width: 33.33%;
 		text-align:center;
 	}
+	.cube1{
+		margin-top: 5em!important;
+	}
 	.cube2 {
-  	  	margin: 2.25em 4em 9em 8em!important;
+  	  	margin: 5em 4em 9em 8em!important;
 	}
 	.tagCloud img{
-		width: 70%;
+		width: 93%;
+	}
+	.cubeNote {
+		position:absolute; 
+		bottom:1em; 
+		font-size:.75em!important;
+	}
+	.cubeNoteRight {
+		right: 8em;
 	}
 	/* -----End Page 1 ------------ */
 
@@ -230,7 +253,10 @@
 		color: #77b8e0!important;
 	}
 	#contThree p:first-of-type {
-		margin-top: 2em;
+		margin-top: 2.5em;
+	}
+	#contThree p:last-of-type {
+		margin-bottom: 0;
 	}
 	span.smItalic {
 		font-size: .65em;
