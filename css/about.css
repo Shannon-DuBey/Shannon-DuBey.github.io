@@ -1,11 +1,6 @@
 /* small screens */
 @media (max-width:480px) {
-	/* Scrollbar */ 
-	::-webkit-scrollbar{width: 10px;}
-	::-webkit-scrollbar-thumb{background-color:rgb(160, 203, 235); border-radius: 4; height:2em;}
-	::-webkit-scrollbar-thumb:hover{background-color:rgb(47, 109, 153);}
-	::-webkit-scrollbar-track{background-color:rgb(237, 237, 237);}
-	/* End Scrollbar */
+
 
 }
 
@@ -16,25 +11,20 @@
 
 
 /* tablets landscape and up */
-@media (min-width:768px) {
-
-}
-
-
-/* large screens */
-@media (min-width:1280px) {
+@media (min-width:1024px) {
 
 	section#aboutLeft {
 		width:17%;
 		display:inline-block;
 	    background-image: url('../images/avatar.png');
-	    background-size: 120%;
+	    background-size: 135%;
 	    background-repeat: no-repeat;
-	    background-position: -3em 1.25em;
-	    padding-bottom: 41%;
+	    background-position: -2.2em 13em;
+	    padding-bottom: 60%;
+	    margin-left: -2%;
 	}
 	section#aboutRight {
-		width:80%;
+		width:84%;
 		display: inline-block;
 		color:#000;
 		margin-top: -4em;
@@ -63,12 +53,13 @@
 	#aboutContent > .content h2 {
 		text-align: center;
 		margin: .25em;
+		font-size: 1.5em;
 	}
 	#aboutContent > .content p,
 	.pgDownLink {
 		color:#000;
 		padding:.5%;
-		font-size: 1.15em;
+		font-size: 1em;
 	}
 
 	#contTwo,
@@ -90,10 +81,10 @@
 		cursor: pointer;
 	}
 	#pgDownLink {
-		left:93.75%;
+		left:94.75%;
 	}
 	#pgUpLink {
-		left: 16.5%;
+		left: 13.75%;
 	}
 	#pgDownLink a,
 	#pgUpLink a {
@@ -143,7 +134,6 @@
 			box-shadow: 7px -7px 8px #666;
 	    }
 	}
-
 	/* ----------------- */
 
 	/* Page 1 */
@@ -165,13 +155,13 @@
 		text-align:center;
 	}
 	#contOne div.cube1{
-		margin-top: 5em;
+		margin: 5em 7em 9em 4em;
 	}
 	#contOne div.cube2 {
   	  	margin: 5em 4em 9em 8em;
 	}
 	.tagCloud img{
-		width: 93%;
+		width: 90%;
 	}
 	#contOne p.cubeNote {
 		position:absolute; 
@@ -181,7 +171,7 @@
 	.cubeNoteRight {
 		right: 8em;
 	}
-	/* -----End Page 1 ------------ */
+
 
 	/* page 2 */
 
@@ -233,8 +223,6 @@
 	}
 	/* ----End Rotatine Cards --------- */
 
-	/* ------End Page 2----------- */
-
 	/* Page 3 */
 	#contThree h4 {
 		background: url('../images/darkFabricBg.png');
@@ -259,8 +247,43 @@
 		color: #284f70;
 	}
 
-	/* -----End Page 3 ------------ */
+
+}
 
 
-/* --- End About Me ---------- */
+/* large screens */
+@media (min-width:1280px) {
+
+	section#aboutLeft {
+	    background-size: 120%;
+	    background-position: -3em 1.25em;
+	    padding-bottom: 41%;
+	    margin-left: ;
+	}
+	section#aboutRight {
+		width:80%;
+	}
+
+	#aboutContent > .content h2 {
+		font-size: 2em;
+	}
+	#aboutContent > .content p {
+		font-size: 1.15em;
+	}
+	#contOne p.cubeNote {
+		font-size: .75em;
+	}
+	#pgDownLink {
+		left:91.75%;
+	}
+	#pgUpLink {
+		left: 14.75%;
+	}
+	#contOne div.cube1{
+		margin: 5em 8em 9em 4em;
+	}
+	.tagCloud img{
+		width: 93%;
+	}
+
 }
