@@ -133,7 +133,9 @@
 			<h2 class="hideSm name">Shannon DuBey</h2>
 			<p class="hideSm title">UI / UX / Web Developer</p>
 
-			<p class="mobileNote"><sup>*</sup> Please note this site does not currently scale down below 768px width (7" tablet landscape mode). A mobile phone friendly option is forthcoming but not yet available.</p>
+			<p ng-if="!viewResume" class="mobileNote">
+				<sup>*</sup> Please note this site does not currently scale down below 768px width (7" tablet landscape mode). A mobile phone friendly option is forthcoming but not yet available.
+			</p>
 		</section>
 
 		<section id="main">
@@ -148,7 +150,9 @@
 				<section ng-controller="TabController as tab" class="resume">
 					<sd-resume></sd-resume>
 				</section>
-				<p class="download">* You can also download my full resume in PDF form <a href="files/sdubeyCV.pdf" target="_blank">here</a> - but it's not as cool as this interactive version</p>
+				<p class="download">
+					* You can also download my full resume in PDF form <a href="files/sdubeyCV.pdf" target="_blank">here</a> - but it's not as cool as this interactive version
+				</p>
 			</section>
 
 		</section>
