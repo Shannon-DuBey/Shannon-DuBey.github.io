@@ -21,6 +21,12 @@
 .bold {
 	font-weight: 700;
 }
+.floatLeft {
+	float: left;
+}
+.floatRight {
+	float: right;
+}
 body {
 	overflow: hidden;
 }
@@ -163,213 +169,7 @@ h1, h2, h3, h4 {
 }
 /* ------------- */
 
-/* About Me Section */
-section#aboutLeft {
-	width:17%;
-	display:inline-block;
-}
-Section#aboutLeft img {
-	position:absolute;
-	top:12em;
-	height:75%;
-}
 
-section#aboutRight {
-	width:80%;
-	display: inline-block;
-	color:#000;
-	margin-top: -4em;
-}
-#aboutContent {
-	margin: 45px 0 0;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	box-shadow: 1px 1px 4px #666;
-	padding: 2%;
-	background: #fff;
-	background: rgb(252,255,244); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(252,255,244,1) 0%, rgba(219,218,201,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,255,244,1)), color-stop(100%,rgba(219,218,201,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* IE10+ */
-	background: linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#dbdac9',GradientType=0 ); /* IE6-9 */
-	height:37.5em;
-	overflow:auto;
-	position:relative;
-}
-#aboutContent > .content h2 {
-	
-	text-align: center;
-}
-#aboutContent > .content p,
-.pgDownLink {
-	color:#000;
-	padding:2%;
-}
-#contTwo,
-#contThree {
-	display:none;
-	position:absolute;
-	top:0;
-	left:0;
-	padding:2%;
-	width: 100%;
-}
-#pgDownLink,
-#pgUpLink {
-	width:100%;
-	position:absolute;
-	bottom:50%;
-	cursor: pointer;
-}
-#pgDownLink {
-	left:93.75%;
-}
-#pgUpLink {
-	left: 17.1%;
-}
-#pgDownLink a,
-#pgUpLink a {
-	text-decoration:none;
-	font-size:1.5em;
-	line-height: 3em;
-}
-.RchevronWrapper, 
-.LchevronWrapper {
-	width:2.5em;
-	display:inline-block;
-}
-.LchevronWrapper{
-	left: 2em;
-
-}
-.RchevronWrapper {
-
-}
-
-.Rchevron::before,
-.Lchevron::before {
-	border-style: solid;
-	border-width: 0.2em 0.2em 0 0;
-	content: '';
-	display: inline-block;
-	height: .7em;
-	left: 0.25em;
-	position: relative;
-	top: .15em;
-	transform: rotate(45deg);
-	vertical-align: top;
-	width: .7em;
-	font-size:2em;
-	-webkit-animation: glow 2.5s infinite alternate;
-}
-.Lchevron::before {
-	transform: rotate(-135deg);
-}
-.Rchevron::after,
-.Lchevron::after {
-	content:'';
-	margin-right:.5em;
-}
-@-webkit-keyframes glow {
-    to {
-		-moz-box-shadow: 7px -7px 8px #666;
-		-webkit-box-shadow: 7px -7px 8px #666;
-		box-shadow: 7px -7px 8px #666;
-    }
-}
-
-
-/* rotating cards */
-.card-container {
-	cursor: pointer;
-	height: 150px;
-	perspective: 600;
-	position: relative;
-	width: 150px;
-	display:inline-block;
-	margin-left: 1em;
-}
-.card {
-	height: 100%;
-	position: absolute;
-	transform-style: preserve-3d;
-	transition: all 1s ease-in-out;
-	width: 100%;
-	-webkit-box-shadow: inset 0px 0px 33px 1px rgba(0,0,0,0.77);
-	-moz-box-shadow: inset 0px 0px 33px 1px rgba(0,0,0,0.77);
-	box-shadow: inset 0px 0px 33px 1px rgba(0,0,0,0.77);
-    border-radius: 5px;
-	box-sizing: border-box;
-}
-.card:hover {
-	transform: rotateY(180deg);
-}
-.card .side {
-	backface-visibility: hidden;
-	border-radius: 6px;
-	height: 100%;
-	position: absolute;
-	overflow: hidden;
-	width: 100%;
-	text-align: center;
-	padding: 5.75%;
-}
-.card .side img {
-	max-width:130px;
-}
-.card .back {
-	background: #eaeaed;
-	color: #0087cc;
-	text-align: center;
-	transform: rotateY(180deg);
-	padding:10% 3%;
-}
-/* ----End Rotatine Cards --------- */
-
-/* 3d cube */
-#threeDCube {
-    display:inline-block;
-    height: 6em;
-    margin: 1.5em;
-    width: 12em;
-    -webkit-transform: perspective(500);
-    -webkit-transform-style: preserve-3d;
-    -webkit-transition: .5s;
-}
-#threeDCube:hover {
-    -webkit-transform: perspective(500) rotateX(90deg) translateY(-3em) translateZ(3em);
-}
-#threeDCube img {
-    background-color: #222;
-    box-shadow: 0 20px 15px -10px hsla(0,0%,0%,.25);
-    display: block;
-    height: 100%;
-    -webkit-transition: .5s;
-}
-#threeDCube:hover img {
-    box-shadow: none;
-}
-.cubeCaption {
-    background-color: #222;
-    color: #fff;
-    padding: 1.5em;
-    -webkit-transform: rotateX(-90deg);
-    -webkit-transform-origin: 100% 0;
-    -webkit-transition: .5s;
-}
-#threeDCube:hover .cubeCaption {
-    box-shadow: 0 20px 15px -10px hsla(0,0%,0%,.25);
-}
-.cubeCaption h3 {
-    font-weight: bold;
-}​
-/* ---End 3d cube ---------- */
-
-/* --- End About Me ---------- */
 
 
 /* small screens */
@@ -519,7 +319,7 @@ section#aboutRight {
 		text-indent: 250px;
 		white-space: nowrap;
 		overflow: hidden;
-		background-image: url(../images/spinnerSm.png);
+		background-image: url('../images/spinnerSm.png');
 		color: #fff;
 		-webkit-animation-name: spinnerRotate;
 		-webkit-animation-duration: 2s;
@@ -582,6 +382,14 @@ section#aboutRight {
 	#header h2.hideSm,
 	#header p.hideSm {
 		margin: 0;
+	}
+
+	#header p.mobileNote{
+		position: absolute;
+	    top: 3em;
+    	right: 0;
+    	margin-right: 2em;
+    	color: #cfcfcf;
 	}
 
 	#footer {
