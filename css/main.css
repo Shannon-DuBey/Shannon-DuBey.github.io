@@ -27,6 +27,12 @@
 .floatRight {
 	float: right;
 }
+.lightBlue {
+	color: #77b8e0;
+}
+.darkBlue {
+	color: #284f70;
+}
 body {
 	overflow: hidden;
 }
