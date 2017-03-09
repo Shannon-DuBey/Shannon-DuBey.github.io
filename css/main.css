@@ -240,7 +240,6 @@ h1, h2, h3, h4 {
 	html[data-useragent*='MSIE 10.0'] #introCotainer {
 		display: none;
 	}
-
 	#introContainer {
 		height: 100%;
 		width: 100%;
@@ -254,25 +253,19 @@ h1, h2, h3, h4 {
 		animation: introContainer 1.5s forwards;
 		animation-delay: 6s;
 	}
-
 	@-webkit-keyframes introContainer {
 		100% {
 			left: -100%;
 		}
-
 	}
-
 	@keyframes introContainer {
 		100% {
 			left: -100%;
 		}
-
 	}
-
 	#pageWrap {
 		width: 100%;
 	}
-
 	#pageWrap.hidden,
 	#pageWrap.visible {
 		max-height: 0;
@@ -282,11 +275,9 @@ h1, h2, h3, h4 {
 		-o-transition: max-height 1.5s ease-in-out;
 		transition: max-height 1.5s ease-in-out;
 	}
-
 	#pageWrap.visible {
 		max-height: 3000px;
 	}
-
 	#introContainer div#introContent {
 		height: 100%;
 		width: 100%;
@@ -301,7 +292,6 @@ h1, h2, h3, h4 {
 		animation: introContent 0.5s forwards;
 		animation-delay: .25s;
 	}
-
 	#introContent div.shadow {
 		position: absolute;
 		height: 100%;
@@ -309,21 +299,16 @@ h1, h2, h3, h4 {
 		background-color: #000;
 		opacity: .4;
 	}
-
 	@-webkit-keyframes introContent {
 		100% {
 			top: 0;
 		}
-
 	}
-
 	@keyframes introContent {
 		100% {
 			top: 0;
 		}
-
 	}
-	/* ---- End Intro --------- */
 
 	/* spinner */
 	#spinner {
@@ -347,28 +332,26 @@ h1, h2, h3, h4 {
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
 	}
-
 	@-webkit-keyframes spinnerRotate {
 		from {
 			-webkit-transform: rotate(0deg);
 		}
-
 		to {
 			-webkit-transform: rotate(360deg);
 		}
-
 	}
-
 	@keyframes spinnerRotate {
 		from {
 			transform: rotate(0deg);
 		}
-
 		to {
 			transform: rotate(360deg);
 		}
 	}
 	/* ---- End Spinner --------- */
+	/* ---- End Intro --------- */
+
+
 
 	#modalContainer {
 		width: 30%;
@@ -423,6 +406,9 @@ h1, h2, h3, h4 {
 
 /* tablet landscape and medium screens */
 @media (min-width:1024px) {
+	#spinner {
+		top: 55%;
+	}
 	#navbar {
 		margin-left: 25%;
 	}
