@@ -205,7 +205,7 @@ h1, h2, h3, h4 {
 /* tablet portrait */
 @media (min-width:768px) {
 	#navbar {
-		margin-left: 25%;
+		margin-left: 30%;
 	}
 	.hideLg {
 		display: none;

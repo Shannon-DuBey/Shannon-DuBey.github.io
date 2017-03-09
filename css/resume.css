@@ -22,9 +22,6 @@
 	color:#1B5428;
 }
 #resume p.download {
-	top: 0;
-    left: 5%;
-    position: absolute;
     font-weight: bold;
     font-size: 1.2em;
     color: #337ab7;
@@ -46,7 +43,7 @@
 }
 
 /* === Mobile devices - Portrait (320px wide) === */
-@media only screen and (min-width : 20em) {
+@media only screen and (min-width:20em) {
 	section.resume {
 		margin:0 auto 2em auto;
 		width:95%;
@@ -172,10 +169,10 @@
 	}
 }
 
-/* === Tablet devices - Portrait (768px wide) === */
-@media only screen and (min-width : 48em) {
+/* --- tablet portrait --- */
+@media only screen and (min-width:768px) {
 	.tab {
-		height:40em;
+		height:55em;
 		overflow-y: auto;
 		overflow-x: hidden;
 		border:1px solid #666;
@@ -187,7 +184,7 @@
 		padding-left:2em;
 	}
 	ul.tabLinks li {
-		margin: 0 2em 0 0;
+		margin: 0 1em 0 0;
 	}
 
 	/* Skills Tab */
@@ -199,10 +196,7 @@
 	div.work {
 		padding:1.5em;
 	}
-	div.employerInfo {
-		font-size:1.2em;
-		line-height:1.3em;
-	}
+	
 	
 	div.employerInfo div.empDate {
 		margin-right:2.5em;
@@ -219,16 +213,42 @@
 	.education ul li.title {
 		margin-left:-.5em;
 	}
+	
+}
+
+/* --- Tablet landscape & medium screens --- */
+@media only screen and (min-width:1023px) {
+	.tab {
+		height:35em;
+	}
+
 	#resume p.download {
 		top: -2.5em;
    		left: 15%;
+	    position: absolute;
+	    font-size: .9em;
 	}
+
+	/* Education Tab */
+	.education ul {
+		width: 50%;
+	}
+	
 }
 
-/* === Tablet devices - Landscape (1024px wide) === */
-@media only screen and (min-width : 64em) {
+/* --- Large Screens --- */
+@media only screen and (min-width:1280px) {
 	section.resume {
 		width:80%;
+	}
+	#resume p.download {
+		font-size: 1em;
+	}
+	.tab {
+		height:40em;
+	}
+	ul.tabLinks li {
+		margin: 0 2em 0 0;
 	}
 
 	/* Skills Tab */
@@ -239,6 +259,12 @@
 	}
 	.skilList ul li.title {
 		padding-bottom:.2em;
+	}
+
+	/* work tab */
+	div.employerInfo {
+		font-size:1.2em;
+		line-height:1.3em;
 	}
 
 	/* Education Tab */
