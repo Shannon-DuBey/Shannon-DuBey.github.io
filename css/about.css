@@ -1,37 +1,28 @@
 /* small screens */
 @media (max-width:480px) {
-
-
+	section#aboutLeft {
+		display: none;
+	}
 }
 
 /* tablets portrait */
 @media (min-width:768px) {
-
-}
-
-
-/* tablets landscape and up */
-@media (min-width:1024px) {
-
-	section#aboutLeft {
-		width:17%;
-		display:inline-block;
-	    background-image: url('../images/avatar.png');
-	    background-size: 135%;
-	    background-repeat: no-repeat;
-	    background-position: -2.2em 13em;
-	    padding-bottom: 60%;
-	    margin-left: -2%;
+	.tagCloud img{
+		width: 50%;
 	}
-	section#aboutRight {
-		width:84%;
-		display: inline-block;
-		color:#000;
-		margin-top: -4em;
+
+	#contTwo,
+	#contThree {
+		display:none;
+		position:absolute;
+		top:0;
+		left:0;
+		padding:2%;
+		width: 100%;
 	}
-	
+
 	#aboutContent {
-		margin: 3em 0 0;
+		margin: .5em 0 0;
 		-webkit-border-radius: 5px;
 		-moz-border-radius: 5px;
 		border-radius: 5px;
@@ -46,10 +37,12 @@
 		background: -ms-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* IE10+ */
 		background: linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#dbdac9',GradientType=0 ); /* IE6-9 */
-		height:42em;
 		overflow:auto;
 		position:relative;
+
+		height:59em;
 	}
+
 	#aboutContent > .content h2 {
 		text-align: center;
 		margin: .25em;
@@ -62,29 +55,21 @@
 		font-size: 1em;
 	}
 
-	#contTwo,
-	#contThree {
-		display:none;
-		position:absolute;
-		top:0;
-		left:0;
-		padding:2%;
-		width: 100%;
-	}
-
 	/* Pagination styles */
 	#pgDownLink,
 	#pgUpLink {
 		width:100%;
 		position:absolute;
-		bottom:45%;
 		cursor: pointer;
+		
 	}
 	#pgDownLink {
-		left:94.75%;
+		left:52%;
+		bottom: 6.5%;
 	}
 	#pgUpLink {
-		left: 13.75%;
+		left: 45%;
+		bottom: 4.5%;
 	}
 	#pgDownLink a,
 	#pgUpLink a {
@@ -100,9 +85,7 @@
 	.LchevronWrapper{
 		left: 2em;
 	}
-	.RchevronWrapper {
 
-	}
 	.Rchevron::before,
 	.Lchevron::before {
 		border-style: solid;
@@ -113,14 +96,14 @@
 		left: 0.25em;
 		position: relative;
 		top: .15em;
-		transform: rotate(45deg);
+		transform: rotate(135deg);
 		vertical-align: top;
 		width: .7em;
 		font-size:2em;
 		-webkit-animation: glow 2.5s infinite alternate;
 	}
 	.Lchevron::before {
-		transform: rotate(-135deg);
+		transform: rotate(-45deg);
 	}
 	.Rchevron::after,
 	.Lchevron::after {
@@ -136,7 +119,18 @@
 	}
 	/* ----------------- */
 
-	/* Page 1 */
+	/* page 1 */
+	#contOne p.cubeNote,
+	.cubeNoteRight {
+		display: none;
+	}
+	#contOne p {
+		font-size: 2em;
+	}
+	.tagCloud {
+		width: 100%;
+		text-align: center;
+	}
 	#contOne h2 {
 		background-image: url('../images/darkFabricBg.png');
 		position: absolute;
@@ -147,34 +141,13 @@
 	}
 	#contOne p {
 		margin-top: 3.8em;
+		font-size: 1em;
 	}
-	.cube1,
-	.cube2,
-	.tagCloud {
-		width: 33.33%;
-		text-align:center;
-	}
-	#contOne div.cube1{
-		margin: 5em 7em 9em 4em;
-	}
-	#contOne div.cube2 {
-  	  	margin: 5em 4em 9em 8em;
-	}
-	.tagCloud img{
-		width: 90%;
-	}
-	#contOne p.cubeNote {
-		position:absolute; 
-		bottom:1em; 
-		font-size:.75em;
-	}
-	.cubeNoteRight {
-		right: 8em;
-	}
-
 
 	/* page 2 */
-
+	#contTwo {
+		color: #000;
+	}
 	/* rotating cards */
 	.card-container {
 		cursor: pointer;
@@ -223,7 +196,7 @@
 	}
 	/* ----End Rotatine Cards --------- */
 
-	/* Page 3 */
+	/* page 3 */
 	#contThree h4 {
 		background: url('../images/darkFabricBg.png');
 		width: 100%;
@@ -233,7 +206,7 @@
 		left: 0;
 	}
 	#contThree p:first-of-type {
-		margin-top: 2.5em;
+		margin-top: 3.5em;
 	}
 	#contThree p:last-of-type {
 		margin-bottom: 0;
@@ -246,6 +219,91 @@
 		font-weight: bold;
 		color: #284f70;
 	}
+}
+
+
+/* tablets landscape and medium screens */
+@media (min-width:1024px) {
+
+	section#aboutLeft {
+		width:17%;
+		display:inline-block;
+	    background-image: url('../images/avatar.png');
+	    background-size: 135%;
+	    background-repeat: no-repeat;
+	    background-position: -2.2em 10em;
+	    padding-bottom: 60%;
+	    margin-left: -2%;
+	}
+	section#aboutRight {
+		width:84%;
+		display: inline-block;
+		color:#000;
+		margin-top: -4em;
+	}
+	
+	#aboutContent {
+		height:39em;
+		margin: 3em 0 0;
+	}
+
+	#pgDownLink {
+		left:94.75%;
+	}
+	#pgUpLink {
+		left: 13.75%;
+	}
+	#pgDownLink,
+	#pgUpLink {
+		bottom:45%;
+	}
+	.Rchevron::before,
+	.Lchevron::before {
+		transform: rotate(45deg);
+	}	
+	.Lchevron::before {
+		transform: rotate(-135deg);
+	}
+	
+
+	/* Page 1 */
+	
+	.cube1,
+	.cube2,
+	.tagCloud {
+		width: 33.33%;
+		text-align:center;
+	}
+	#contOne div.cube1{
+		margin: 5em 7em 9em 4em;
+	}
+	#contOne div.cube2 {
+  	  	margin: 5em 4em 9em 8em;
+	}
+	.tagCloud img{
+		width: 90%;
+	}
+	#contOne p.cubeNote {
+		position:absolute; 
+		bottom:1em; 
+		font-size:.75em;
+		display: block;
+	}
+	.cubeNoteRight {
+		right: 8em;
+		display: block;
+	}
+
+	/* page 2 */
+	#contTwo {
+		padding: 2% 8%;
+	}
+
+	/* Page 3 */
+	#contThree p:first-of-type {
+		margin-top: 3em;
+	}
+	
 
 
 }
@@ -253,7 +311,9 @@
 
 /* large screens */
 @media (min-width:1280px) {
-
+	#aboutContent {
+		height: 42em;
+	}
 	section#aboutLeft {
 	    background-size: 120%;
 	    background-position: -3em 1.25em;
@@ -284,6 +344,12 @@
 	}
 	.tagCloud img{
 		width: 93%;
+	}
+	#contTwo {
+		padding: 2%;
+	}
+	#contThree p:first-of-type {
+		margin-top: 2.5em;
 	}
 
 }
